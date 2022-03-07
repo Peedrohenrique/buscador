@@ -57,6 +57,7 @@
   background-color: #fff;
   width: 500px;
   border-radius: 8px;
+  animation: slide 5s;
 }
 
 .main h2 {
@@ -76,6 +77,24 @@
   }
   to {
     transform: rotateX(0deg);
+  }
+}
+
+@keyframes go-back {
+  0% {
+    transform: translateX(500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
