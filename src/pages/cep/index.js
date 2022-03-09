@@ -10,7 +10,7 @@ export default function Buscador() {
 
   async function handleSearch() {
     if (input === "") {
-      swal("Oops!", "Something went wrong!", "error");
+      swal("Oops!", "Preencha algum CEP!,", "error");
       return;
     }
     try {
@@ -18,7 +18,7 @@ export default function Buscador() {
       setCep(res.data);
       setInput("");
     } catch {
-      swal("Oops!", "Something went wrong!", "error");
+      swal("Oops!", "CEP errado!!!,", "error");
       setInput("");
     }
   }
