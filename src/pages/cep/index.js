@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 import "./style.css";
 import Api from "../../services/api";
+import swal from "sweetalert";
 
 export default function Buscador() {
   const [input, setInput] = useState("");
@@ -9,7 +10,7 @@ export default function Buscador() {
 
   async function handleSearch() {
     if (input === "") {
-      alert("Preencha algum CEP!"); //Colocador dentro do state depois
+      swal("Oops!", "Something went wrong!", "error");
       return;
     }
     try {
@@ -17,7 +18,7 @@ export default function Buscador() {
       setCep(res.data);
       setInput("");
     } catch {
-      alert("Ops.. CEP errado!!!"); //Colocador dentro do state depois
+      swal("Oops!", "Something went wrong!", "error");
       setInput("");
     }
   }
