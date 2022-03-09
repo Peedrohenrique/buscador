@@ -29,7 +29,7 @@ export default function Buscador() {
 
       <div className="containerImput">
         <input
-          type="text"
+          type="number"
           placeholder="Digite seu cep..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
