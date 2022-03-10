@@ -8,7 +8,6 @@ export default function Buscador() {
   const [input, setInput] = useState("");
   const [cep, setCep] = useState({});
 
-
   async function handleSearch() {
     if (input === "") {
       swal("Oops!", "Preencha algum CEP!,", "error");
@@ -19,7 +18,7 @@ export default function Buscador() {
       setCep(res.data);
       setInput("");
     } catch {
-      swal("Oops!", "CEP errado!!!,", "error");
+      swal("Oops!", "Cep inválido ou inexistente!", "error");
       setInput("");
     }
   }
