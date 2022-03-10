@@ -8,6 +8,7 @@ export default function Buscador() {
   const [input, setInput] = useState("");
   const [cep, setCep] = useState({});
 
+
   async function handleSearch() {
     if (input === "") {
       swal("Oops!", "Preencha algum CEP!,", "error");
@@ -29,7 +30,7 @@ export default function Buscador() {
 
       <div className="containerImput">
         <input
-          type="number"
+          type="Number"
           placeholder="Digite seu cep..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
